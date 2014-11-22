@@ -5,24 +5,26 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
 body{
 margin:0;
 padding:0;
-background: #000 url(../images/bg.jpg) no-repeat right center;
+background: url(../images/bg.jpg) center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
 font-family: Helvetica Neue, Helvetica, Arial;
 }
 
 .container{
-width: 95%;
+width: 100%;
 margin: 0;
 }
 
 .header{
-width:424px;
 float: left;
 padding-top: 15px;
-margin: 0 0 0 0;
+margin: 0 0 0 50px;
 }
 
 a.logo{
-width: 300px;
 margin: 0 auto 30px auto;
 text-shadow: 1px 1px 7px #3e3935;
 filter: dropshadow(color=#3e3935, offx=1, offy=1);
@@ -53,7 +55,7 @@ height: 24px;
 
 ul.social li{
 float: left;
-background: url(../images/social.png) no-repeat left top;
+background: url(../images/social.png) left top no-repeat;
 position: relative;
 height: 24px;
 }
@@ -116,55 +118,60 @@ margin: 0 auto;
 ul.wp_ul li{
 background: url(../images/wpmini-grey.png) no-repeat right top;
 float: right;
+height:24px;
 position: relative;
 }
 
 ul.wp_ul li.wp{
-background-position: 0 0;
-width: 21px;
+width: 32px;
 margin-right: 20px;
 }
 
 ul.wp_ul li.wp a{
 display: block;
-width: 21px;
+width: 32px;
 }
-
 
 .video{
 width: 500px;
-height: 278px;
-background: url(../images/video.png) no-repeat right top;
-padding: 0px;
-float: right;
+background: url(../images/video.png) right top no-repeat;
+padding: 20px 20px 10px 10px;
+float: left;
 }
 
 .coming_soon{
-width: 1272px;
 margin: 0;
-float: right;
+width: 30%;
+position:fixed;
+right: 1%;
+bottom:0;
+display:block;
+}
+
+* html .coming_soon{
+position: absolute;
 }
 
 p{
 color: #fff;
 font-size: 16px;
 text-align: center;
+margin: 0 40px 20px auto;
 }
 
 .information{
-margin: 20px auto 0 auto;
-padding: 0;
-background: url(../images/form.png) no-repeat left top;
 height: 48px;
 width: 307px;
+margin: 20px auto 0 auto;
+background: url(../images/form.png) left top no-repeat;
 padding: 9px 0 0 9px;
 }
 
 .main{
-width: 299px;
+width: 299px; 
 height: 37px;
 float: left;
-background: url(../images/field.png) no-repeat left top;
+background: url(../images/field.png) left top no-repeat;
 }
 
 .field{
@@ -187,10 +194,20 @@ border: 0;
 width: 62px;
 height: 36px;
 float: left;
-background: url(../images/go.png) no-repeat left top;
-cursor: pointer;
+background: url(../images/go.png) left top no-repeat;cursor: pointer;
 }
 
 .go:hover{
-background: url(../images/go.png) no-repeat left bottom;
+background: url(../images/go.png) left bottom no-repeat;
+}
+
+.teddy{
+position:fixed;
+bottom:0;
+right:30%;
+display:block;
+}
+
+* html .teddy{
+position: absolute;
 }
