@@ -46,24 +46,15 @@
                 data: formData
             }).done (function(data) { 
                 var response = JSON.parse(data);
-                alert(response.message);
+                $("#subscriptionSuccess").removeClass('hidden');
             }).fail (function(data) {
                 var response = JSON.parse(data);
-                alert("We are sorry, something strange has happened. Please send us an email at thelittlegreenkid@gmail.com so we can help you better");
+                $("#subscriptionFailure").removeClass('hidden');
             });
             event.preventDefault();
             $("#subscribe")[0].reset();
         });
         });
-    </script>
-
-    <script type="text/javascript" src="javascript/cufon-yui.js"></script>
-    <script type="text/javascript" src="javascript/CaramelNuggets_400.font.js"></script>
-    <script type="text/javascript" src="javascript/Gotham_Book_400.font.js"></script>
-    
-    <script type="text/javascript">
-        Cufon.replace('a.logo', {fontFamily: 'CaramelNuggets'});
-        Cufon.replace('a.logo span', {fontFamily: 'Gotham Book'});
     </script>
 
 </head>
@@ -98,8 +89,18 @@
     </nav>
 
     <img src="images/bg5.jpg" class="bg" alt=""/>
+
     <div class="row">
         <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="alert alert-success hidden" id="subscriptionSuccess">
+                <a href="#" class="close" data-dismiss="alert">&times</a>
+                <strong>Thank you</strong> for your subscription.
+            </div>
+            <div class="alert alert-error hidden" id="subscriptionFailure">
+                <a href="#" class="close" data-dismiss="alert">&times</a>
+                <p>We are sorry, something strange has happened.</p> 
+                <p>Please send us an email at thelittlegreenkid@gmail.com so we can help you better.</p>
+            </div>
             <a class="logo" href="http://www.littlegreenkid.com"><img src="images/logo.png" alt="Little Green Kid Logo"/></a>
         </div>
         <div class="clearfix visible-sm-block"></div>
