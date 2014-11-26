@@ -36,7 +36,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
         $("#subscribe").submit(function(event) {
-            var formData  = {'email':$("#email").val()};
+            var formData  = {'email':$("#inputEmail").val()};
             var formURL = $(this).attr("action");
             console.log(formData);
             var jqxhr = $.ajax({ 
